@@ -71,3 +71,10 @@ Criar comando para servidor
 Rodar o comando no terminal com Gitbash
 ***
 npm run start
+
+## Criar estrutura para o projeto
+
+Criar o arquivo app.js na pasta src
+´´´
+touch src/app.js
+´´´
