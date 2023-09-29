@@ -1,21 +1,20 @@
 // Importar o arquivo de configuração
 const app = require('./app')
 // Importar a porta do servid
-[or
 const PORT = app.get('port')
 
 app.get('/api', (request, response) => {
-    response.send('Retorno de informações do banco de dados')
+    response.send('Listar Informações')
     console.log('Listar informações')
 });
 
 app.post('/api', (request, response) => {
-    response.send('Método utilizado para salvar informações')
+    response.send('Salvar informações')
     console.log('Listar informações')
 });
 
 app.put('/api/:id', (request, response) => {
-    response.send('Grêmio maior do sul')
+    response.send('Editar informações')
     console.log('Listar informações')
 });
 app.delete('/api/:id', (request, response) => {
