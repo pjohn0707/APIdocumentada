@@ -109,12 +109,12 @@ nano crudRouter.js
 const express = require('express');
 // Instanciar o router na variável router
 
-const router = express.Router();
+const router = Router();
+// Importar funções do controller para a rota acessar as funções
 
-router.get('/api', (request, response) => {
-    response.send('Retorno de informações do banco de dados')
-    console.log('Listar informações')
-});
+const { listarDados } = require('../controllers/controller')
+
+router.get('/api', listarDados);
 
 router.post('/api', (request, response) => {
     response.send('Método utilizado para salvar informações')
@@ -146,3 +146,11 @@ mkdir src/controllers
 ```
 touch src/controllers/controller.js
 ```
+
+### Criar funções para processar as requisições das rotas
+
+´´´
+function listarDados(request, repouse) {
+
+}
+´´´
