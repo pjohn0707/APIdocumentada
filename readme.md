@@ -134,3 +134,15 @@ module.exports = router;
 
 ```
 
+### CRIAÇÃO DE CONTROLES
+* Arquivos para processar as requisições das rotas
+
+### Criar pasta de controllers 
+```
+mkdir src/controllers
+```
+
+### Criar arquivo controllers
+```
+touch src/controllers/controller.js
+```
