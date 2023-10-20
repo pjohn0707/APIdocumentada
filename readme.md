@@ -105,30 +105,24 @@ nano crudRouter.js
 * Digitar o código do arquivo criado
 ```
 // Importar pacote do express
-
-const express = require('express');
+const { Router } = require('express');
 // Instanciar o router na variável router
-
 const router = Router();
 // Importar funções do controller para a rota acessar as funções
+const {
+    listarDados,
+    gravarDados,
+    atualizarDados,
+    deletarDados,
+} = require('../controllers/controller')
 
-const { listarDados } = require('../controllers/controller')
+router.get('/listar', listarDados);
 
-router.get('/api', listarDados);
+router.post('/gravar', gravarDados)
 
-router.post('/api', (request, response) => {
-    response.send('Método utilizado para salvar informações')
-    console.log('Listar informações')
-});
+router.put('/atualizar/:id', atualizarDados)
 
-router.put('/api/:id', (request, response) => {
-    response.send('Grêmio maior do sul')
-    console.log('Listar informações')
-});
-router.delete('/api/:id', (request, response) => {
-    response.send('Método utilizado para deletar informações')
-    console.log('Listar informações')
-});
+router.delete('/deletar/:id', deletarDados)
 
 module.exports = router;
 
@@ -154,3 +148,28 @@ function listarDados(request, repouse) {
 
 }
 ´´´
+function listarDados(request, response) {
+    response.send("Retorno de lista de informações do Banco de dados");
+}
+
+function gravarDados(request, response) {
+    response.send('Método utilizado para salvar informações');
+}
+
+function atualizarDados(request, response) {
+    response.send('Atualizar');
+}
+
+function deletarDados(request, response) {
+    response.send('Deletar');
+}
+
+module.exports = {
+    listarDados,
+    gravarDados,
+    atualizarDados,
+    deletarDados,
+}
+```
+
+*
