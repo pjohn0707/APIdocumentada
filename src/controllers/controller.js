@@ -21,4 +21,5 @@ module.exports = {
     gravarDados,
     atualizarDados,
     deletarDados,
+    selecionarAlunoId
 }
