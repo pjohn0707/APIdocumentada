@@ -5,15 +5,19 @@ function listarDados(request, response) {
 }
 
 function gravarDados(request, response) {
-    response.send('Metodo utilizado para salvar informações!');
+    response.send('Metodo utilizado para gravar informações!');
 }
 
 function atualizarDados(request, response) {
-    response.send('Metodo utilizado para salvar informações!');
+    response.send('Metodo utilizado para atualizar informações!');
 }
 
 function deletarDados(request, response) {
-    response.send('Metodo utilizado para salvar informações!');
+    response.send('Metodo utilizado para deletar informações!');
+}
+
+function selecionarAlunoId(request, response) {
+    response.send('Metodo utilizado para selecionar informações!');
 }
 
 module.exports = {

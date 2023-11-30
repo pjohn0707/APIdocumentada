@@ -24,7 +24,7 @@ async function listarUsuarios(request, response) {
             .status(200)
             .json({
                 sucess: true,
-                message: "Ooops! Não foi pussível listar as informações solicitadas!",
+                message: "Ooops! Não foi possível listar as informações solicitadas!",
                 data: err
             });
         }
@@ -54,7 +54,7 @@ connection.query(query, params, (err, results) => {
             .status(201)
             .json({
                 sucess: true,
-                message: "Sucesso! Auno cadastrado",
+                message: "Sucesso! Aluno cadastrado",
                 data: results
             })
     }
